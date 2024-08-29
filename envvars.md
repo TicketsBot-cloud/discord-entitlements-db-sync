@@ -1,0 +1,11 @@
+- `DAEMON`: Whether the service should run in daemon or oneshot mode, `true` or `false`
+- `RUN_FREQUENCY`: When using daemon mode, how often the sync operation should run in seconds
+- `EXECUTION_TIMEOUT`: How long after a synchronisation operation begins before it is considered to have timed out
+- `SENTRY_DSN`: The DSN for the Sentry instance to use for error reporting, optional
+- `JSON_LOGS`: Whether to log in JSON format, `true` or `false`
+- `LOG_LEVEL`: The minimum severity level to log
+- `DISCORD_APPLICATION_ID`: The snowflake for the app which the SKUs belong to
+- `DISCORD_TOKEN`: The authentication token of the aforementioned app
+- `DISCORD_PROXY_HOST`: Optional, the hostname to replace requests to discord.com with (e.g. for use with twilight's http-proxy)
+- `DATABASE_URI`: The URI for the database to synchronise the data into
+- `MAX_REMOVALS_THRESHOLD`: The maximum number of entitlement removals that can occur in a single run.
