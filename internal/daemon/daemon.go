@@ -115,6 +115,7 @@ func (d *Daemon) RunOnce(ctx context.Context) error {
 			}
 
 			sku = *tmp
+			skuCache[entitlement.SkuId] = sku
 		}
 
 		if entitlement.Deleted {
