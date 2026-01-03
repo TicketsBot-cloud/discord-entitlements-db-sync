@@ -2,9 +2,9 @@ name: Build and Publish
 
 on:
   push:
-    branches: [ "master" ]
+    branches: ["main"]
     tags:
-      - '*'
+      - "*"
   workflow_dispatch:
 
 jobs:
