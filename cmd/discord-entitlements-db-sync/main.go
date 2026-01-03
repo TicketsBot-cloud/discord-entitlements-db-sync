@@ -3,17 +3,18 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/TicketsBot/common/observability"
-	"github.com/TicketsBot/database"
-	"github.com/TicketsBot/discord-entitlements-db-sync/internal/config"
-	"github.com/TicketsBot/discord-entitlements-db-sync/internal/daemon"
-	"github.com/getsentry/sentry-go"
-	"github.com/jackc/pgx/v4/pgxpool"
-	"github.com/rxdn/gdl/rest/request"
-	"go.uber.org/zap"
-	"go.uber.org/zap/zapcore"
 	"net/http"
 	"time"
+
+	"github.com/TicketsBot-cloud/common/observability"
+	"github.com/TicketsBot-cloud/database"
+	"github.com/TicketsBot-cloud/discord-entitlements-db-sync/internal/config"
+	"github.com/TicketsBot-cloud/discord-entitlements-db-sync/internal/daemon"
+	"github.com/TicketsBot-cloud/gdl/rest/request"
+	"github.com/getsentry/sentry-go"
+	"github.com/jackc/pgx/v4/pgxpool"
+	"go.uber.org/zap"
+	"go.uber.org/zap/zapcore"
 )
 
 func main() {

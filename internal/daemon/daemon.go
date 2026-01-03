@@ -2,16 +2,17 @@ package daemon
 
 import (
 	"context"
-	"github.com/TicketsBot/common/collections"
-	"github.com/TicketsBot/common/model"
-	"github.com/TicketsBot/common/utils"
-	"github.com/TicketsBot/database"
-	"github.com/TicketsBot/discord-entitlements-db-sync/internal/config"
-	"github.com/google/uuid"
-	"github.com/rxdn/gdl/objects/entitlement"
-	"github.com/rxdn/gdl/rest"
-	"go.uber.org/zap"
 	"time"
+
+	"github.com/TicketsBot-cloud/common/collections"
+	"github.com/TicketsBot-cloud/common/model"
+	"github.com/TicketsBot-cloud/common/utils"
+	"github.com/TicketsBot-cloud/database"
+	"github.com/TicketsBot-cloud/discord-entitlements-db-sync/internal/config"
+	"github.com/TicketsBot-cloud/gdl/objects/entitlement"
+	"github.com/TicketsBot-cloud/gdl/rest"
+	"github.com/google/uuid"
+	"go.uber.org/zap"
 )
 
 type Daemon struct {
