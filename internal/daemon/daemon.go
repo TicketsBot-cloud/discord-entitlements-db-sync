@@ -204,7 +204,7 @@ func (d *Daemon) nextPage(ctx context.Context, afterId uint64, entitlements []en
 	fetched, err := rest.ListEntitlements(ctx, d.config.Discord.Token, nil, d.config.Discord.ApplicationId, rest.EntitlementQueryOptions{
 		After:         utils.Ptr(afterId),
 		Limit:         utils.Ptr(pageLimit),
-		ExcludedEnded: utils.Ptr(true),
+		ExcludeEnded:  utils.Ptr(true),
 	})
 	if err != nil {
 		return nil, err
