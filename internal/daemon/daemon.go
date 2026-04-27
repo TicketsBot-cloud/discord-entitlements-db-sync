@@ -66,7 +66,7 @@ func (d *Daemon) RunOnce(ctx context.Context) error {
 
 	start := time.Now()
 	defer func() {
-		duration := time.Now().Sub(start)
+		duration := time.Since(start)
 		if duration > (d.config.ExecutionTimeout / 2.0) {
 			d.logger.Warn("Execution took more than 50% of the timeout", zap.Duration("duration", duration))
 		}
