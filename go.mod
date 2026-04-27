@@ -2,6 +2,8 @@ module github.com/TicketsBot-cloud/discord-entitlements-db-sync
 
 go 1.22.0
 
+replace github.com/TicketsBot-cloud/gdl => ../gdl
+
 require (
 	github.com/TicketsBot-cloud/common v0.0.0-20251026182733-99fa0dc31d90
 	github.com/TicketsBot-cloud/database v0.0.0-20251230153828-3a49abf50812

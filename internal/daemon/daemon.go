@@ -66,7 +66,7 @@ func (d *Daemon) RunOnce(ctx context.Context) error {
 
 	start := time.Now()
 	defer func() {
-		duration := time.Now().Sub(start)
+		duration := time.Since(start)
 		if duration > (d.config.ExecutionTimeout / 2.0) {
 			d.logger.Warn("Execution took more than 50% of the timeout", zap.Duration("duration", duration))
 		}
@@ -202,9 +202,9 @@ func (d *Daemon) nextPage(ctx context.Context, afterId uint64, entitlements []en
 	d.logger.Debug("Fetching page of entitlements", zap.Uint64("after", afterId), zap.Int("limit", pageLimit), zap.Int("total", len(entitlements)))
 
 	fetched, err := rest.ListEntitlements(ctx, d.config.Discord.Token, nil, d.config.Discord.ApplicationId, rest.EntitlementQueryOptions{
-		After:         utils.Ptr(afterId),
-		Limit:         utils.Ptr(pageLimit),
-		ExcludedEnded: utils.Ptr(true),
+		After:        utils.Ptr(afterId),
+		Limit:        utils.Ptr(pageLimit),
+		ExcludeEnded: utils.Ptr(true),
 	})
 	if err != nil {
 		return nil, err
